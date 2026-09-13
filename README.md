@@ -1,5 +1,25 @@
 # Pravasi Krishi Bandhu — প্রবাসী কৃষি বন্ধু
 
+## Cinematic website version
+
+This version includes the original KRL introduction video as a muted, looping hero background, a transparent header, and warm gold and orange styling. The website's programme wording is preserved with em dashes removed.
+
+### Run locally
+
+Install Node.js, then run this command from the repository root (no package installation is needed):
+
+```sh
+node serve.cjs
+```
+
+Open [the local website](http://127.0.0.1:8000/). The preview server supports video byte-range requests for playback and seeking.
+
+The standalone website is in `pravasi-krishi-bandhu/`. Its `media/` folder includes the original video and a poster image. To deploy this static version, use that folder as the publish directory, with no build command. The hero respects reduced-motion and data-saving preferences.
+
+Original project: [BKS-Bengal/pravasi-krishi-bandhu](https://github.com/BKS-Bengal/pravasi-krishi-bandhu). The briefing, historical design notes, and deployment links below belong to that original project; they do not indicate deployment of this version.
+
+---
+
 NRB / diaspora supporter programme for the **Krishi Ratna League — Bengal, Season 1**.
 Joint **Bharatiya Krishak Samaj** × **KarmYog for the 21st Century**.
 

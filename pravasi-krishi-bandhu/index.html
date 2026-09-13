@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pravasi Krishi Bandhu — Krishi Ratna League Bengal</title>
+<title>Pravasi Krishi Bandhu Krishi Ratna League Bengal</title>
 <meta name="description" content="Stand behind one young farmer in the district your family came from. ₹1,00,000 for one season, in five monthly instalments, with a dashboard open the whole way. Bharatiya Krishak Samaj · KarmYog for the 21st Century.">
-<meta property="og:title" content="Pravasi Krishi Bandhu — প্রবাসী কৃষি বন্ধু">
+<meta property="og:title" content="Pravasi Krishi Bandhu প্রবাসী কৃষি বন্ধু">
 <meta property="og:description" content="You know the name of your village. Somewhere in it, a young woman or a young man is about to build a farm.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌾</text></svg>">
@@ -157,11 +157,293 @@ footer img{width:230px;margin-bottom:18px}
   .hd img{width:160px}
   .hd a.cta{font-size:.7rem;padding:10px 13px}
 }
+
+/* Aurora Glow redesign palette drawn from the supplied reference */
+:root{
+  --page:#fff5d8;
+  --surface:#fffaf0;
+  --surface-sunk:#ffe7a3;
+  --ink:#321704;
+  --ink-soft:#63320b;
+  --ink-mute:#8a531d;
+  --ink-faint:#a76d2e;
+  --green:#f36b0a;
+  --green-soft:#d94c00;
+  --green-tint:#fff0bd;
+  --gold:#ff9700;
+  --gold-soft:#ffd21a;
+  --gold-tint:#fff1a8;
+  --terra:#b83c00;
+  --rule:rgba(170,83,0,.18);
+  --rule-strong:rgba(142,55,0,.38);
+  --serif:'Segoe UI',system-ui,-apple-system,'Helvetica Neue',sans-serif;
+  --sans:'Segoe UI',system-ui,-apple-system,'Helvetica Neue',sans-serif;
+  --wrap:1160px;
+}
+
+body{
+  background:
+    radial-gradient(circle at 12% 8%,rgba(255,210,0,.24),transparent 22rem),
+    linear-gradient(180deg,#fff7dc 0%,#fffaf0 46%,#fff1c4 100%);
+  font-size:17px;
+  line-height:1.7;
+  overflow-x:hidden;
+}
+
+.wrap{padding:0 30px}
+section{padding:clamp(70px,8vw,112px) 0;position:relative}
+section:nth-of-type(even){background:rgba(255,255,255,.30)}
+
+.eyebrow{
+  width:max-content;
+  padding:7px 12px;
+  border:1px solid rgba(132,52,0,.18);
+  border-radius:999px;
+  background:rgba(255,255,255,.35);
+  color:#9f3500;
+  font-size:.68rem;
+  letter-spacing:.18em;
+  box-shadow:inset 0 1px rgba(255,255,255,.65);
+}
+.eyebrow.g{color:#9f3500;background:#fff0bb}
+h1,h2,h3{font-weight:760;letter-spacing:-.045em}
+h2{
+  max-width:18ch;
+  font-size:clamp(2rem,4.5vw,3.65rem);
+  color:var(--ink);
+  line-height:1.02;
+  margin:.7rem 0 1.4rem;
+}
+h3{font-size:1.08rem;letter-spacing:-.02em;color:var(--ink)}
+p{color:var(--ink-soft)}
+a{color:var(--green-soft)}
+.lead{font-size:clamp(1.12rem,2vw,1.36rem);color:#4d2508}
+.rule{height:0;background:none;border:0}
+
+/* luminous navigation */
+.bar{
+  height:8px;
+  background:linear-gradient(90deg,#f7971e 0%,#ffb000 46%,#ffd200 100%);
+}
+header{
+  background:rgba(255,249,231,.84);
+  border-bottom:1px solid rgba(140,58,0,.14);
+  box-shadow:0 10px 40px rgba(126,55,0,.08);
+  backdrop-filter:blur(16px);
+}
+.hd{padding:13px 30px}
+.hd img{width:218px;filter:saturate(1.06) contrast(1.03)}
+.hd a.cta{
+  background:linear-gradient(135deg,#f97300,#ffa800);
+  color:#fffaf0;
+  border:1px solid rgba(121,42,0,.18);
+  padding:12px 20px;
+  border-radius:999px;
+  box-shadow:0 9px 24px rgba(211,77,0,.22),inset 0 1px rgba(255,255,255,.35);
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.hd a.cta:hover{background:linear-gradient(135deg,#e95a00,#ff9700);transform:translateY(-2px);box-shadow:0 13px 30px rgba(211,77,0,.28)}
+
+/* glowing hero */
+.hero{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  min-height:700px;
+  padding:clamp(78px,9vw,132px) 0 clamp(76px,8vw,112px);
+  background:
+    radial-gradient(circle at 73% 52%,rgba(255,255,238,.98) 0 7%,rgba(255,248,207,.80) 17%,transparent 38%),
+    linear-gradient(123deg,#f7971e 0%,#ffab00 48%,#ffd200 100%);
+}
+.hero::before{
+  content:"";
+  position:absolute;inset:0;z-index:-2;
+  background-image:
+    linear-gradient(rgba(255,255,255,.13) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.13) 1px,transparent 1px);
+  background-size:42px 42px;
+  mask-image:linear-gradient(to bottom,rgba(0,0,0,.75),transparent 82%);
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  width:min(44vw,560px);aspect-ratio:1;
+  right:8%;top:50%;transform:translateY(-45%);
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.48);
+  box-shadow:
+    0 0 0 38px rgba(255,255,255,.12),
+    0 0 0 78px rgba(255,255,255,.08),
+    0 0 100px 80px rgba(255,250,220,.42);
+}
+.hero-grid{grid-template-columns:1.2fr .8fr;gap:56px;position:relative;z-index:1}
+.hero h1{
+  max-width:10ch;
+  font-size:clamp(3.4rem,8.4vw,6.75rem);
+  line-height:.86;
+  color:#fff8e7;
+  text-shadow:0 3px 25px rgba(144,49,0,.16);
+  margin:1.2rem 0 1rem;
+}
+.hero .bn{font-weight:700;color:#6f2900;margin-bottom:1.7rem;letter-spacing:-.02em}
+.hero .lede{color:#5b2604;font-weight:560;max-width:43ch}
+.hero-grid img{
+  position:relative;
+  z-index:2;
+  width:100%;max-width:360px;
+  padding:26px;
+  border:1px solid rgba(255,255,255,.5);
+  border-radius:44px;
+  background:rgba(255,255,255,.22);
+  box-shadow:0 30px 80px rgba(143,51,0,.16),inset 0 1px rgba(255,255,255,.6);
+  backdrop-filter:blur(8px);
+}
+.btn{
+  padding:14px 24px;
+  border-radius:999px;
+  font-size:.78rem;
+  transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:#3b1704;color:#fff8e7;box-shadow:0 12px 28px rgba(75,27,0,.22)}
+.btn.p:hover{background:#5a2100;box-shadow:0 15px 34px rgba(75,27,0,.27)}
+.btn.s{background:rgba(255,255,255,.24);color:#542000;border:1px solid rgba(103,37,0,.35);backdrop-filter:blur(8px)}
+.btn.s:hover{border-color:#6d2800;background:rgba(255,255,255,.38)}
+
+/* energetic stat band */
+.strip{
+  background:#3b1704;
+  color:#fff4cf;
+  box-shadow:inset 0 1px rgba(255,255,255,.12);
+}
+.strip .wrap{gap:0;padding-top:0;padding-bottom:0}
+.strip .s{padding:34px 26px;border-right:1px solid rgba(255,210,0,.18)}
+.strip .s:first-child{padding-left:30px}
+.strip .s:last-child{border-right:0}
+.strip .s .f{font-weight:800;color:#ffd200;letter-spacing:-.04em}
+.strip .s .l{color:#ffc875;letter-spacing:.12em}
+
+/* warm content modules */
+.two{gap:clamp(34px,5vw,70px)}
+.three{gap:22px}
+.card,.money,.dim{
+  border:1px solid rgba(152,67,0,.16);
+  background:linear-gradient(145deg,rgba(255,255,255,.78),rgba(255,238,183,.58));
+  border-radius:24px;
+  box-shadow:0 18px 55px rgba(156,68,0,.08),inset 0 1px rgba(255,255,255,.85);
+}
+.card{padding:30px;position:relative;overflow:hidden}
+.card::after{
+  content:"";position:absolute;width:90px;height:90px;right:-35px;bottom:-42px;border-radius:50%;
+  background:linear-gradient(135deg,#ff9700,#ffd200);opacity:.22;
+}
+.card h3{color:#c84900;font-size:1.35rem}
+.quote{
+  position:relative;
+  border:0;
+  border-radius:22px;
+  padding:26px 28px 26px 32px;
+  background:linear-gradient(135deg,#fff0ac,#ffd978);
+  color:#722900;
+  font-style:normal;
+  font-weight:650;
+  box-shadow:0 16px 42px rgba(203,91,0,.10);
+}
+.quote::before{content:"“";position:absolute;left:11px;top:2px;font-size:2.2rem;color:#f26b00;opacity:.75}
+
+.money{overflow:hidden}
+.money .r{padding:18px 26px;border-bottom-color:rgba(152,67,0,.13);color:#5f300d}
+.money .r .v{color:#9e3800;font-size:1.04rem}
+.money .r:last-child{background:linear-gradient(90deg,#ffed9c,#ffd35a);color:#642300}
+.money .r:last-child .v{color:#922d00}
+
+.dims{gap:16px}
+.dim{padding:25px;min-height:190px}
+.dim .w{color:#f56d00}
+.dim .n{color:#6c2700;font-weight:800;letter-spacing:-.035em}
+.dim .e{color:#b35c19}
+
+.tl{border-top:0;position:relative}
+.tl::before{content:"";position:absolute;left:192px;top:18px;bottom:18px;width:2px;background:linear-gradient(#f7971e,#ffd200)}
+.tl .i{grid-template-columns:172px 1fr;gap:42px;padding:24px 0;border-bottom:1px solid rgba(152,67,0,.14);position:relative}
+.tl .i::before{content:"";position:absolute;left:187px;top:30px;width:12px;height:12px;border-radius:50%;background:#ff9700;border:3px solid #fff4cb;box-shadow:0 0 0 3px rgba(247,151,30,.18)}
+.tl .d{color:#9c3500}
+.tl .d span{color:#bc6f2e}
+
+.note{
+  border:1px solid rgba(168,75,0,.16);
+  border-radius:22px;
+  padding:25px 28px;
+  background:linear-gradient(115deg,#fff0a8,#ffe073);
+  box-shadow:0 15px 40px rgba(172,72,0,.08);
+}
+.note .h{color:#a32f00}
+
+.step{border-bottom-color:rgba(255,226,135,.18)}
+.step .i{background:linear-gradient(135deg,#f76b00,#ffb000);color:#fff8e7;box-shadow:0 8px 20px rgba(255,122,0,.24)}
+
+/* deep ember closing panel */
+.close{
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 84% 20%,rgba(255,172,0,.26),transparent 25rem),
+    linear-gradient(135deg,#351304,#5a2100 58%,#7a2c00);
+  color:#ffe9ae;
+}
+.close::before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:42px 42px;pointer-events:none;
+}
+.close .wrap{position:relative;z-index:1}
+.close h2{color:#fff9e9}
+.close p,.close .lead{color:#ffe4a0 !important}
+.close .eyebrow{color:#ffd200;border-color:rgba(255,210,0,.28);background:rgba(255,210,0,.08)}
+.close .btn.p{background:linear-gradient(135deg,#f7971e,#ffd200);color:#351304;box-shadow:0 14px 36px rgba(255,153,0,.22)}
+.close .btn.p:hover{background:linear-gradient(135deg,#ff8500,#ffe23a)}
+.close .btn.s{color:#fff3d0;border-color:rgba(255,226,150,.42);background:rgba(255,255,255,.05)}
+
+footer{background:#fff4d2;border-top:0;padding:48px 0}
+footer .f{color:#7d4414}
+footer img{filter:saturate(1.05)}
+
+@media(max-width:860px){
+  .wrap{padding-left:22px;padding-right:22px}
+  .hero{min-height:auto;padding-top:64px}
+  .hero-grid{grid-template-columns:1fr;gap:44px}
+  .hero h1{font-size:clamp(3.15rem,16vw,5.2rem)}
+  .hero-grid img{margin:0 auto;max-width:280px;border-radius:32px}
+  .hero::after{width:360px;right:-72px;top:75%}
+  .strip .wrap{grid-template-columns:1fr 1fr}
+  .strip .s{padding:26px 18px;border-bottom:1px solid rgba(255,210,0,.18)}
+  .strip .s:nth-child(2){border-right:0}
+  .strip .s:first-child{padding-left:18px}
+  .tl::before{left:5px}
+  .tl .i{grid-template-columns:1fr;gap:8px;padding-left:30px}
+  .tl .i::before{left:0;top:29px}
+}
+
+@media(max-width:560px){
+  body{font-size:16px}
+  .hd{padding:11px 18px}
+  .hd img{width:142px}
+  .hd a.cta{font-size:.62rem;padding:9px 12px}
+  .hero .eyebrow{font-size:.58rem}
+  .hero h1{font-size:clamp(3rem,17vw,4.3rem)}
+  .btn{width:100%;text-align:center}
+  .strip .wrap{grid-template-columns:1fr}
+  .strip .s,.strip .s:nth-child(2){border-right:0}
+  .money .r{align-items:flex-start;flex-direction:column;gap:5px}
+  .card,.dim{border-radius:20px}
+  .quote,.note{border-radius:18px}
+}
 </style>
+<link rel="stylesheet" href="cinema.css">
+<script src="cinema.js" defer></script>
 </head>
 <body>
 
-<div class="bar"></div>
 <header>
   <div class="hd">
     <img src="masthead-t.png" alt="KarmYog for the 21st Century · Bharatiya Krishak Samaj">
@@ -169,22 +451,29 @@ footer img{width:230px;margin-bottom:18px}
   </div>
 </header>
 
+<main>
 <!-- HERO -->
 <div class="hero">
+    <figure class="intro-player">
+      <div class="film-frame">
+        <video id="league-intro" muted loop playsinline preload="metadata" poster="media/krl-poster.jpg" width="1920" height="1080" aria-label="Krishi Ratna League introduction">
+          <source src="media/krl-intro.mp4" type="video/mp4">
+        </video>
+      </div>
+    </figure>
   <div class="wrap hero-grid">
     <div>
       <div class="eyebrow">An invitation · Durga Puja 2026</div>
-      <h1>Pravasi<br>Krishi Bandhu</h1>
+      <h1>Pravasi<br><span>Krishi Bandhu</span></h1>
       <div class="bn">প্রবাসী কৃষি বন্ধু</div>
       <p class="lede">You know the name of your village. Somewhere in it, a young woman or a
-      young man is about to build a farm. Stand behind them — for one season, for one hundred
+      young man is about to build a farm. Stand behind them for one season, for one hundred
       thousand rupees, with your eyes open the whole way.</p>
       <div class="btnrow">
         <a class="btn p" href="#begin">Book a 20-minute call</a>
         <a class="btn s" href="#offer">What it involves</a>
       </div>
     </div>
-    <img src="krl-logo-t.png" alt="Krishi Ratna League — Bengal">
   </div>
 </div>
 
@@ -199,7 +488,7 @@ footer img{width:230px;margin-bottom:18px}
 </div>
 
 <!-- THE RETURN -->
-<section>
+<section class="return">
   <div class="wrap">
     <div class="eyebrow g">Pratyaavartan</div>
     <h2>The Return</h2>
@@ -207,7 +496,7 @@ footer img{width:230px;margin-bottom:18px}
       <div>
         <p class="lead">Most of us did not leave Bengal. We left a village, and Bengal happened
         to be around it.</p>
-        <p>There is a word for the place — <em>vite</em>. The <em>bati</em>. The plot the family
+        <p>There is a word for the place <em>vite</em>. The <em>bati</em>. The plot the family
         held, the pond behind it, the name of the block you still give when an elder asks where
         you are really from. You may not have stood on it in thirty years. You can still draw it.</p>
         <p>The young people left, as you left. The land stayed, and got smaller with each
@@ -220,7 +509,7 @@ footer img{width:230px;margin-bottom:18px}
         <p>That is why this takes the shape of a league rather than a scheme. A subsidy makes a
         farmer solvent for a year. A championship makes farming something a young person in
         Bengal might actually <em>want</em>.</p>
-        <p><strong>Pratyaavartan</strong> means homecoming — the idea that a place can find its
+        <p><strong>Pratyaavartan</strong> means homecoming the idea that a place can find its
         way back to the direction it had, and that the people who left are not disqualified from
         helping.</p>
       </div>
@@ -243,8 +532,8 @@ footer img{width:230px;margin-bottom:18px}
       <div class="money">
         <div class="r"><span>Total support, one farm, one season</span><span class="v">₹1,00,000</span></div>
         <div class="r"><span>Paid as five monthly instalments</span><span class="v">5 × ₹20,000</span></div>
-        <div class="r"><span><strong>To the farm</strong> — seed capital</span><span class="v">₹90,000</span></div>
-        <div class="r"><span><strong>To the League</strong> — verification, mentoring, technology, prizes</span><span class="v">₹10,000</span></div>
+        <div class="r"><span><strong>To the farm</strong> seed capital</span><span class="v">₹90,000</span></div>
+        <div class="r"><span><strong>To the League</strong> verification, mentoring, technology, prizes</span><span class="v">₹10,000</span></div>
         <div class="r"><span>Proportion reaching the land</span><span class="v">90%</span></div>
       </div>
       <div>
@@ -252,7 +541,7 @@ footer img{width:230px;margin-bottom:18px}
         <p style="font-size:.96rem">A named farm and the farmer's profile. An online dashboard
         with the activity log, photographs and the expense ledger. Progress reported against
         each of the five instalments. The farmer's own video messages. An invitation to the
-        Season 1 awards at Durga Puja 2027. A certificate of support — and the farm may carry
+        Season 1 awards at Durga Puja 2027. A certificate of support and the farm may carry
         your <em>vite</em>, or a parent's name.</p>
         <h3 style="margin-top:22px">How you choose</h3>
         <p style="font-size:.96rem">You tell us the district, normally the one your family comes
@@ -274,14 +563,14 @@ footer img{width:230px;margin-bottom:18px}
 <hr class="rule">
 
 <!-- THE LEAGUE -->
-<section>
+<section class="league">
   <div class="wrap">
     <div class="eyebrow g">The mechanism</div>
     <h2>The Krishi Ratna League</h2>
     <p class="lead">Take the format that made a nation watch cricket for two months a year, and
     point it at farming.</p>
     <p style="max-width:72ch;margin-bottom:2.4rem">West Bengal's <strong>294 assembly
-    constituencies</strong> are grouped into roughly <strong>15 regional teams</strong> — a
+    constituencies</strong> are grouped into roughly <strong>15 regional teams</strong> a
     franchise here is a group of constituencies, not a cricket side. Every farm carries its own
     marks; a team's score is the aggregate of its farms. There is a table, and it moves.</p>
 
@@ -290,7 +579,7 @@ footer img{width:230px;margin-bottom:18px}
       <div class="dim"><span class="w">30%</span><div class="n">Satya</div><div class="e">Truth</div>
         <p>Organic. No chemical dependency, no pesticides. Transparent, dated evidence of what was done.</p></div>
       <div class="dim"><span class="w">25%</span><div class="n">Mangal</div><div class="e">Goodness</div>
-        <p>Good for human health, for the soil, for the surrounding environment — not only the yield.</p></div>
+        <p>Good for human health, for the soil, for the surrounding environment not only the yield.</p></div>
       <div class="dim"><span class="w">20%</span><div class="n">Sundar</div><div class="e">Beauty</div>
         <p>Natural aesthetic, considered design, harmony with the land.</p></div>
       <div class="dim"><span class="w">25%</span><div class="n">Samriddhi</div><div class="e">Prosperity</div>
@@ -301,9 +590,9 @@ footer img{width:230px;margin-bottom:18px}
     AI-assisted monitoring supports the farmer and records progress through the year.</p>
 
     <div class="three" style="margin-top:36px">
-      <div class="card"><h3>₹1 crore</h3><p>Best individual farm — the most prosperous farm in Bengal.</p></div>
-      <div class="card"><h3>₹1 crore</h3><p>Best regional team — highest aggregate across 300–400 farms.</p></div>
-      <div class="card"><h3>₹1 crore</h3><p>Category awards — innovation and other categories.</p></div>
+      <div class="card"><h3>₹1 crore</h3><p>Best individual farm the most prosperous farm in Bengal.</p></div>
+      <div class="card"><h3>₹1 crore</h3><p>Best regional team highest aggregate across 300–400 farms.</p></div>
+      <div class="card"><h3>₹1 crore</h3><p>Category awards innovation and other categories.</p></div>
     </div>
   </div>
 </section>
@@ -311,7 +600,7 @@ footer img{width:230px;margin-bottom:18px}
 <hr class="rule">
 
 <!-- CREDENTIALS -->
-<section>
+<section class="credentials">
   <div class="wrap">
     <div class="eyebrow g">Who stands behind it</div>
     <h2>Seven decades, and eighteen years</h2>
@@ -334,16 +623,16 @@ footer img{width:230px;margin-bottom:18px}
       </div>
       <div>
         <h3 style="font-size:1.15rem;font-family:var(--serif);font-weight:400;color:var(--green)">KarmYog for the 21<sup>st</sup> Century</h3>
-        <p>Founded in 2008 by <strong>Mahacharya Sourabh J. Sarkar</strong> — B.Tech, IIT
+        <p>Founded in 2008 by <strong>Mahacharya Sourabh J. Sarkar</strong> B.Tech, IIT
         Kharagpur; M.A. Education &amp; New Media, Syracuse University. Its subject has always
         been the same one: how a population changes a habit.</p>
-        <p><strong>Kolkata Jaago — Safe Drive Save Life</strong> reached 300+ schools and roughly
+        <p><strong>Kolkata Jaago Safe Drive Save Life</strong> reached 300+ schools and roughly
         one lakh taxi drivers in Kolkata. <strong>Jeevan-Jeevika Abhiyaan</strong> changed
         farming practice in Odisha through the SRI technique, and worked with informal-sector
         workers in Rajasthan, health workers in Howrah and safai karmacharis in Mumbai.</p>
         <p><strong>OmniDEL</strong> won the NSDC Best Learning Methodology Award in 2014 and a
         million-dollar grant from TATA Trusts in 2015. It is now at the forefront of Agentic AI
-        for informal-sector transformation — the capability this League's verification layer is
+        for informal-sector transformation the capability this League's verification layer is
         built on.</p>
         <p><strong>KarmYog Green Village</strong> turned roughly 12 acres of HIDCO wasteland into
         a working eco-village with 2,000+ fruit-bearing trees.</p>
@@ -355,7 +644,7 @@ footer img{width:230px;margin-bottom:18px}
 <hr class="rule">
 
 <!-- TRANSPARENCY -->
-<section>
+<section class="transparency">
   <div class="wrap">
     <div class="eyebrow g">The uncomfortable section</div>
     <h2>What we promise, and what we do not</h2>
@@ -373,7 +662,7 @@ footer img{width:230px;margin-bottom:18px}
         <h3>"What if the farm fails?"</h3>
         <p>Then it fails, and you will see that happen too. This is a real farm, run by a real
         young person, against weather and pests and markets and their own inexperience.
-        <strong>The farmer will do his best and so will we. We cannot guarantee success — no one
+        <strong>The farmer will do his best and so will we. We cannot guarantee success no one
         honestly can.</strong></p>
         <p>What we do guarantee is that a struggling farm will not quietly disappear from your
         dashboard. You will see the bad month, and what was tried.</p>
@@ -381,14 +670,14 @@ footer img{width:230px;margin-bottom:18px}
     </div>
 
     <div class="note" style="margin-top:32px">
-      <span class="h">Supporters holding foreign passports or OCI cards — please read</span>
+      <span class="h">Supporters holding foreign passports or OCI cards please read</span>
       <p>KarmYog for the 21<sup>st</sup> Century Foundation holds 80G but <strong>does not yet
       hold FCRA registration</strong>, which is what Indian law requires before an organisation
       may receive a contribution from a foreign source. Under FCRA, an OCI cardholder or foreign
       passport holder is treated as a foreign source regardless of where they were born.</p>
       <p>So at this moment the invitation is to <strong>resident Indians</strong> and to
       <strong>Non-Resident Indians holding Indian passports</strong>. If you hold a foreign
-      passport or an OCI card, please <strong>register your interest</strong> — FCRA
+      passport or an OCI card, please <strong>register your interest</strong> FCRA
       registration is being pursued and we will come back to you the moment it is in place. We
       would rather tell you this here than take your money incorrectly.</p>
     </div>
@@ -398,7 +687,7 @@ footer img{width:230px;margin-bottom:18px}
 <hr class="rule">
 
 <!-- TIMELINE -->
-<section>
+<section class="journey">
   <div class="wrap">
     <div class="eyebrow g">The journey</div>
     <h2>Three Pujas</h2>
@@ -412,13 +701,13 @@ footer img{width:230px;margin-bottom:18px}
       <div class="i"><div class="d">10 October 2026<span>Mahalaya</span></div>
         <div class="b">The model farm at Munshi Bheri is complete. Six weeks earlier it was a dump yard.</div></div>
       <div class="i"><div class="d">From 16 October 2026<span>Durga Puja</span></div>
-        <div class="b"><strong>The Puja whose theme is Krishi Samaj — for the farmers.</strong>
+        <div class="b"><strong>The Puja whose theme is Krishi Samaj for the farmers.</strong>
         The pandal stands on the working farm, in the East Kolkata Wetlands. Season 1 begins.</div></div>
       <div class="i"><div class="d">2026 – 2027<span>Season 1</span></div>
-        <div class="b"><strong>5,000 Smart Integrated Farms</strong> across 294 constituencies —
+        <div class="b"><strong>5,000 Smart Integrated Farms</strong> across 294 constituencies
         built, mentored, verified and graded through the year. This is the season your farm runs in.</div></div>
       <div class="i"><div class="d">Durga Puja 2027<span>Awards</span></div>
-        <div class="b"><strong>Season 1 awards</strong> — ₹3 crore, the best farm, the best team.
+        <div class="b"><strong>Season 1 awards</strong> ₹3 crore, the best farm, the best team.
         On the same stage, the <strong>All-India Krishi Ratna League</strong> is launched. You are invited.</div></div>
       <div class="i"><div class="d">2028<span>Pratyaavartan</span></div>
         <div class="b">All-India results. The Bengal model, complete enough to be pointed at.
@@ -449,7 +738,7 @@ footer img{width:230px;margin-bottom:18px}
         <div class="step" style="border-color:rgba(255,253,247,.16)"><div class="i">3</div><div>
           <h3 style="color:#fffdf7">The season begins at the Puja</h3>
           <p style="color:#ddd6bd">Five monthly instalments of ₹20,000. A dashboard that stays
-          open. An invitation to the awards at Durga Puja 2027 — where you may meet the person
+          open. An invitation to the awards at Durga Puja 2027 where you may meet the person
           you backed.</p></div></div>
       </div>
       <div>
@@ -457,15 +746,15 @@ footer img{width:230px;margin-bottom:18px}
           border-radius:4px;padding:26px">
           <h3 style="color:#fffdf7">To arrange the call</h3>
           <p style="color:#ddd6bd;font-size:.95rem">
-            <strong style="color:#fffdf7">Bharatiya Krishak Samaj — West Bengal</strong><br>
+            <strong style="color:#fffdf7">Bharatiya Krishak Samaj West Bengal</strong><br>
             F-127, Downtown Mall, Uniworld City<br>New Town, Kolkata 700156</p>
           <p style="color:#ddd6bd;font-size:.95rem;margin-top:14px">
             <a href="tel:+918655246764" style="color:var(--gold-soft);text-decoration:none">+91 86552 46764</a><br>
-            <a href="mailto:contact@bkswbengal.org?subject=Pravasi%20Krishi%20Bandhu%20—%20request%20a%2020-minute%20call"
+            <a href="mailto:contact@bkswbengal.org?subject=Pravasi%20Krishi%20Bandhu%20 %20request%20a%2020-minute%20call"
                style="color:var(--gold-soft);text-decoration:none">contact@bkswbengal.org</a><br>
             <a href="https://www.bkswbengal.org" style="color:var(--gold-soft);text-decoration:none">www.bkswbengal.org</a></p>
           <div class="btnrow" style="margin-top:22px">
-            <a class="btn p" href="mailto:contact@bkswbengal.org?subject=Pravasi%20Krishi%20Bandhu%20—%20request%20a%2020-minute%20call&body=My%20name%3A%0AThe%20district%20my%20family%20comes%20from%3A%0ABest%20time%20to%20call%20me%3A%0APhone%2FWhatsApp%3A%0A">Request the call</a>
+            <a class="btn p" href="mailto:contact@bkswbengal.org?subject=Pravasi%20Krishi%20Bandhu%20 %20request%20a%2020-minute%20call&body=My%20name%3A%0AThe%20district%20my%20family%20comes%20from%3A%0ABest%20time%20to%20call%20me%3A%0APhone%2FWhatsApp%3A%0A">Request the call</a>
           </div>
         </div>
       </div>
@@ -478,19 +767,20 @@ footer img{width:230px;margin-bottom:18px}
   </div>
 </section>
 
+</main>
 <footer>
   <div class="wrap">
     <img src="masthead-t.png" alt="KarmYog for the 21st Century · Bharatiya Krishak Samaj">
     <div class="f">
-      <div><strong>Bharatiya Krishak Samaj</strong><br>Since 1955 — seven decades for the Indian farmer<br>
+      <div><strong>Bharatiya Krishak Samaj</strong><br>Since 1955 seven decades for the Indian farmer<br>
         F-127, Downtown Mall, Uniworld City, New Town, Kolkata 700156</div>
       <div><strong>Pravasi Krishi Bandhu</strong> · প্রবাসী কৃষি বন্ধু<br>
-        Krishi Ratna League — Bengal · Season 1 · 2026–27<br>
+        Krishi Ratna League Bengal · Season 1 · 2026–27<br>
         In partnership with KarmYog for the 21<sup>st</sup> Century</div>
     </div>
     <p style="font-family:var(--sans);font-size:.72rem;color:var(--ink-faint);
-      margin-top:24px;line-height:1.7">Some elements of the League's structure — the exact number
-      of farms per constituency, the final team map, the detailed marking rubric and the jury —
+      margin-top:24px;line-height:1.7">Some elements of the League's structure the exact number
+      of farms per constituency, the final team map, the detailed marking rubric and the jury
       are still being settled and are marked as not final wherever they appear. They will be
       published when they are fixed.</p>
   </div>
